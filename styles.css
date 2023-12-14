@@ -1,0 +1,103 @@
+body{
+    --jy-black: rgb(29,29,31);
+    --jy-white:#ffffff;
+    --jy-cloudy-rgba:rgba(245, 245, 245, 1);
+    --jy-dark-rgba:rgba(0, 0, 0, 0.098);
+    --jy-delete:rgba(0, 0, 0, 0.259);
+    --jy-delete-hover:rgba(0, 0, 0, 0.457);
+    --jy-dark-grey: #777777;
+    --jy-shadow: 2px 0px 15px 0px rgba(0, 0, 0, 0.10);
+    --jy-shadow-hover: 3px 0px 15px 0px rgba(0, 0, 0, 0.35);
+    --jy-3d-box:scale3d(1.01,1.01,1.01);
+    --jy-card-radius:1.25rem;
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+    width: 100%;
+}
+.rules{
+    max-width: 300px;
+    width: 100%;
+    margin: 0 auto;
+    margin-top: 8rem;
+}
+.description-wrapper{
+    margin: 0 auto;
+    margin-bottom: 2rem;
+}
+.calculator {
+    position: relative;
+    max-width: 300px;
+    width: 100%;
+    border: 1px solid var(--jy-black);
+    border-radius: var(--jy-card-radius);
+    padding: 10px;
+}
+.previous-operation, .result{
+    width: 100%;
+}
+input[type="text" i] {
+    position: relative;
+    width: 100%;
+    box-sizing: border-box;
+    border: 0;
+    background-color: var(--jy-cloudy-rgba);
+    color: var(--jy-black);
+    text-align: right;
+}
+.previous-operation{
+    margin:10px 0;
+}
+.result {
+    margin-bottom: 15px;
+}
+.previous-operation input[type="text" i], .result input[type="text" i]{
+    border-radius: var(--jy-card-radius);
+    padding: 0.5rem 1rem;
+}
+.previous-operation input[type="text" i]{
+    font-size: 1.2rem;
+}
+.result input[type="text" i] {
+    font-size: 3rem;
+}
+.btn-container {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1px;
+}
+.btn-container:nth-child(2) {
+    margin-bottom: 0;
+}
+.btn {
+    flex: 1;
+    height: 55px;
+    margin-right: 1px;
+}
+.btn:last-child {
+    margin-right: 0;
+}
+input[type="button" i] {
+    background-color: var(--jy-cloudy-rgba);
+    border: 0;
+    font-size: 1.1rem;
+    opacity: 1;
+    cursor: pointer;
+    color: var(--jy-black);
+    transition: 0.3s all ease-in-out;
+}
+input[type="button" i]:hover{
+    background-color: var(--jy-dark-rgba);
+}
+input[type="button" i].delete, input[type="button" i].clear {
+    background-color: var(--jy-delete);
+    transition: 0.3s background-color ease-in-out;
+}
+input[type="button" i].delete:hover , input[type="button" i].clear:hover{
+    background-color: var(--jy-delete-hover);
+}
+footer{
+    text-align: center;
+    font-size: 0.8rem;
+    line-height: 2;
+}
